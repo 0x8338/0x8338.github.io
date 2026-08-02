@@ -66,52 +66,53 @@
     color: var(--ink);
   }
 
-  .intro {
-    margin-top: 1.5rem;
-    max-width: 30rem;
-    font-size: clamp(1.05rem, 3vw, 1.3rem);
-    font-style: italic;
-    line-height: 1.6;
-    color: var(--stone);
-  }
-
-  nav {
+  nav.project {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.1rem;
   }
 
-  nav a.project {
+  nav.project a.project-link {
     font-family: 'Space Mono', 'Courier New', monospace;
-    font-size: clamp(1.5rem, 6vw, 2.4rem);
-    letter-spacing: 0.03em;
+    font-size: clamp(1.6rem, 7vw, 2.8rem);
+    letter-spacing: 0.02em;
     color: var(--ink);
     text-decoration: none;
     border: 1px solid var(--stone-light);
-    border-radius: 14px;
-    padding: 1.1rem 2.6rem;
-    transition: border-color 0.2s, transform 0.2s;
+    border-radius: 18px;
+    padding: 1.3rem 3.2rem;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   }
 
-  nav a.project:hover {
+  nav.project a.project-link:hover {
     border-color: var(--ink);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   }
 
-  nav a.meta {
+  nav.project .project-intro {
+    font-style: italic;
+    font-size: clamp(1rem, 2.8vw, 1.2rem);
+    line-height: 1.5;
+    color: var(--stone);
+    max-width: 24rem;
+  }
+
+  nav.project a.meta {
+    margin-top: 0.6rem;
     font-family: 'Space Mono', 'Courier New', monospace;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.06em;
     color: var(--stone);
     text-decoration: none;
     border-bottom: 1px solid var(--stone-light);
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.2rem;
     transition: color 0.2s;
   }
 
-  nav a.meta:hover {
+  nav.project a.meta:hover {
     color: var(--ink);
     border-color: var(--ink);
   }
@@ -121,9 +122,9 @@
 <main>
   <h1>0x8338 <span class="hanzi">茸</span></h1>
   <p class="born">born at <span class="date">20260624</span></p>
-  <p class="intro">A daily record of lives taken by violence and disaster — and the promises made, kept, and broken.</p>
-  <nav>
-    <a href="/dontforget/" class="project">dontforget</a>
+  <nav class="project">
+    <a href="/dontforget/" class="project-link">dontforget</a>
+    <p class="project-intro">daily lives lost, promises made, kept, and broken.</p>
     <a href="https://github.com/0x8338" class="meta">GitHub</a>
   </nav>
 </main>
